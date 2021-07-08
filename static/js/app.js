@@ -34,10 +34,10 @@ function updateFilters() {
 
     // 4b. Save the value that was changed as a variable.
     let elementValue = changedElement.property("value");
-    console.log(elementValue);
+    // console.log(elementValue);
     // 4c. Save the id of the filter that was changed as a variable.
-    let filteredId = changedElement.attr("id");
-    console.log(filterId);
+    let filterId = changedElement.attr("id");
+    // console.log(filterId);
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
     if (elementValue) {
@@ -64,8 +64,7 @@ function updateFilters() {
       return Object.entries(filters).every(([filterId, filterValue]) => {
         return row[filterId] == filterValue
       })
-    })
-  
+    }) 
     // 10. Finally, rebuild the table using the filtered data
     buildTable(filteredData);
   }
